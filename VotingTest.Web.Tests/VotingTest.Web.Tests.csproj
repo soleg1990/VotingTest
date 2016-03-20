@@ -92,6 +92,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\VotingTest.DAL\VotingTest.DAL.csproj">
+      <Project>{8B352B73-A7B7-49A7-9DD2-52B4FE6EF4C8}</Project>
+      <Name>VotingTest.DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VotingTest.Web\VotingTest.Web.csproj">
       <Project>{ED1D4858-F97C-4CED-AD0D-1DE99418CA8E}</Project>
       <Name>VotingTest.Web</Name>
