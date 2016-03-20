@@ -1,10 +1,11 @@
-﻿using VotingTest.DAL.Entities;
+﻿using System;
+using VotingTest.DAL.Entities;
 using VotingTest.DAL.EntityFramework;
 using VotingTest.DAL.Interfaces;
 
 namespace VotingTest.DAL.Repositories
 {
-    public class GeneralRepository : IGeneralRepository
+    public class GeneralRepository : IGeneralRepository, IDisposable
     {
         private readonly EFdbContext _db;
         private IBaseRepository<Role> _roleRepository;

@@ -8,7 +8,7 @@ using VotingTest.DAL.Interfaces;
 
 namespace VotingTest.DAL.Repositories
 {
-    public class BaseRepository<T> : IBaseRepository<T> where T: BaseEntity
+    public class BaseRepository<T> : IBaseRepository<T> where T: BaseEntity, new()
     {
         private readonly EFdbContext _dbContext;
 
@@ -23,6 +23,9 @@ namespace VotingTest.DAL.Repositories
 
         public void Delete(Guid id)
         {
+            //var item = new T() {Id = id};
+            //_dbContext.Set<T>().Attach(item);
+            //_dbContext.Set<T>().Remove(item);
             T item = Get(id);
             if (item != null)
                 _dbContext.Set<T>().Remove(item);
