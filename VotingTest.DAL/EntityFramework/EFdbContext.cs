@@ -1,5 +1,6 @@
 ﻿using System.Data.Entity;
 using VotingTest.DAL.Entities;
+using VotingTest.DAL.Interfaces;
 
 namespace VotingTest.DAL.EntityFramework
 {

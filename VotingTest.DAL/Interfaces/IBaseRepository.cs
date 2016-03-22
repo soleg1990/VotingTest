@@ -4,7 +4,7 @@ using VotingTest.DAL.Entities;
 
 namespace VotingTest.DAL.Interfaces
 {
-    public interface IBaseRepository<T> where T : BaseEntity
+    public interface IBaseRepository<T>
     {
         void Create(T item);
         void Delete(Guid id);
