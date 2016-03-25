@@ -13,6 +13,12 @@ namespace VotingTest.Web.Controllers
     public class VotingController : Controller
     {
         // GET: Voting
+        private IGeneralRepository db;
+
+        public VotingController(IGeneralRepository repo)
+        {
+            db = repo;
+        }
         public ActionResult Index()
         {
             var votingsFake = new List<Voting>();

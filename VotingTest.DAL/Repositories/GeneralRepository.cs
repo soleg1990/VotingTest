@@ -14,7 +14,7 @@ namespace VotingTest.DAL.Repositories
         private IBaseRepository<VotingItem> _itemRepository;
         private IBaseRepository<Variant> _variantRepository;
         private IBaseRepository<Answer> _answerRepository;
-
+        public GeneralRepository() { }
         public GeneralRepository(string connectionString)
         {
             _db = new EFdbContext(connectionString);
